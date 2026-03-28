@@ -1,0 +1,11 @@
+Github:
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+
+Linkedin:
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
+
+Spotify:
+
+https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg
