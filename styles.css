@@ -52,6 +52,9 @@ body {
 }
 
 .bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 10px;
   background: white;
   margin-right: 50px;
@@ -68,6 +71,11 @@ body {
 .bio .paragraph {
   font-size: 2vw;
   margin-left: 5vw;
+}
+
+.bio .links {
+  margin-right: 5vw;
+  align-self: flex-end;
 }
 
 .content {
