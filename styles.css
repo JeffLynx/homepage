@@ -96,21 +96,42 @@ img {
 }
 
 .links a {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
+  padding: 2rem;
 }
 
 .links a img {
   width: 3rem;
 }
 
-/* .content { */
-/*   background: white; */
-/*   height: 2000px; */
-/* } */
-/**/
-/* .footer { */
-/*   background: steelblue; */
-/*   height: 300px; */
-/* } */
+.content {
+  background: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-headline {
+  font-family: "Playfair_Display";
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.project-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenshot-1 {
+  background: red;
+  text-align: center;
+  width: 80%;
+}
+
+.footer {
+  background: steelblue;
+}
