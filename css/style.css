@@ -1,169 +1,126 @@
-@font-face {
-  font-family: "Playfair_Display";
-  src:
-    local("Playfair_Display"),
-    url(../Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Roboto";
-  src:
-    local("Roboto"),
-    url(../Fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf);
-}
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.25;
-  line-height: 1.75;
+:root {
+  --box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-h2,
-h3 {
-  font-family: "Playfair_Display", serif;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-  font-size: 2.5rem;
-  line-height: 1.25;
-  font-weight: 400;
-}
-
-h3 {
-  font-size: 1.75rem;
-  line-height: 1.5;
-  font-weight: 300;
-}
-
-img {
-  display: block;
-  max-inline-size: 100%;
-}
-
-.two-column-layout-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  position: relative;
-  background: white;
-
-  @media (max-width: 1770px) {
-    display: block;
-  }
-}
-
-.two-column-layout-header::before {
+.header-mobile::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 45%;
 
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
 
-  background: teal;
+  background: #0891b2;
 
-  transform: skewY(-15deg);
+  transform: skewY(-35deg);
   transform-origin: top left;
 
   z-index: 0;
-
-  @media (max-width: 1770px) {
-    left: -50%;
-    width: 150%;
-    transform: skewY(-30deg);
-  }
 }
 
-.portrait {
+.hero-image-mobile {
   position: relative;
-  z-index: 2;
-  margin-block: 3rem;
-  margin-inline-start: 4rem;
-
-  @media (max-width: 1770px) {
-    margin-inline-end: 4rem;
-    width: 50%;
-  }
-}
-
-.portrait img {
-  width: 100%;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.name {
-  position: absolute;
-  bottom: 0rem;
-  width: 100%;
-  text-align: center;
-  font-size: 7rem;
-  font-family: "Playfair_Display";
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  color: #fff;
-
-  @media (max-width: 1770px) {
-    font-size: 5rem;
-  }
-}
-
-.header-right {
-  position: relative;
-  z-index: 1;
-  margin-block: 7rem;
-  margin-inline-end: 4rem;
-  padding-block: 5rem;
-  padding-inline: 3rem;
-  background: #fff;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-image: url("../Images/josef_loberg_portrait.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  height: 25rem;
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-end;
+  padding-inline-start: 1rem;
 
-  @media (max-width: 1770px) {
-    margin-inline-start: 4rem;
-    margin-block: 3rem;
-  }
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: #fff;
+
+  margin-block: 1rem;
+  margin-inline: 1.5rem;
+  box-shadow: var(--box-shadow);
+
+  z-index: 1;
 }
 
-.about-me {
+.hero-image-mobile h1 {
+  font-weight: 400;
+}
+
+.about-me-mobile {
+  position: relative;
+  background: #fff;
+  margin: 1rem;
+  padding: 0.1rem;
+}
+
+.about-me-mobile h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding-block-end: 1rem;
+}
+
+.fun-facts-mobile {
+  list-style: none;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.introduction {
-  padding-top: 2rem;
-  font-size: 2em;
-
-  @media (max-width: 1770px) {
-    font-size: 1.5rem;
-  }
-}
-
-.social-links-primary {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.social-links-primary ul {
-  display: flex;
+ul {
   list-style: none;
-  gap: 1rem;
-
-  @media (max-width: 1770px) {
-    padding-top: 2rem;
-  }
 }
 
-.social-links-primary ul li {
-  width: 3rem;
-  height: 3rem;
+.social-links-mobile {
+  display: flex;
+  justify-content: center;
+  padding-block-start: 1rem;
+}
+
+.social-links-mobile ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+ul>li>a>img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.main-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block-start: 4rem;
+}
+
+.main-mobile h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.main-mobile .project {
+  margin-inline: 1rem;
+  margin-block: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.main-mobile .project h2 {
+  background-color: #ccc;
+  height: 15rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 500px) {
+  .wrapper-mobile {
+    display: none;
+  }
 }
