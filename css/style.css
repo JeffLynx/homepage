@@ -18,39 +18,44 @@
   padding: 0;
 }
 
-h1 {
-  font-size: 5rem;
-  font-family: "Playfair_Display", serif;
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25;
+  line-height: 1.75;
 }
 
-h2 {
-  font-size: 2.5vw;
-  font-weight: 400;
+h2,
+h3 {
   font-family: "Playfair_Display", serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-h3 {
-  font-size: 2rem;
-  font-family: "Playfair_Display", serif;
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  font-weight: 400;
 }
 
-p {
-  font-size: 1rem;
-  font-family: "Roboto", serif;
+h3 {
+  font-size: 1.75rem;
   line-height: 1.5;
+  font-weight: 300;
 }
 
 img {
-  max-width: 100%;
+  display: block;
+  max-inline-size: 100%;
 }
 
 .two-column-layout-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
   position: relative;
   background: white;
+
+  @media (width > 1770px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .two-column-layout-header::before {
@@ -69,68 +74,73 @@ img {
   transform-origin: top left;
 
   z-index: 0;
-}
 
-.two-column-layout-header .portrait {
-  position: relative;
-  z-index: 2;
-  margin: 3rem 0 2rem 4rem;
-}
-
-.two-column-layout-header .about-me {
-  position: relative;
-  z-index: 1;
-  margin: 2rem 4rem 2rem 0;
+  @media (width < 1770px) {
+    transform: skewY(-55deg);
+    transform-origin: top left;
+  }
 }
 
 .portrait {
   position: relative;
-  display: inline-block;
+  z-index: 2;
+  margin-block: 3rem;
+  margin-inline-start: 4rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+  @media (width < 1770px) {
+    margin-inline: 4rem;
+  }
 }
 
 .portrait img {
-  display: block;
   width: 100%;
-  height: auto;
 }
 
 .name {
   position: absolute;
-  bottom: 0.75rem;
+  bottom: 1rem;
   width: 100%;
   text-align: center;
-  font-size: 8vw;
+  font-size: 7rem;
   font-family: "Playfair_Display";
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   color: #fff;
+
+  @media (width < 1770px) {
+    font-size: 9rem;
+  }
 }
 
-.about-me {
+.header-right {
+  position: relative;
+  z-index: 1;
+  margin-block: 7rem;
+  margin-inline-end: 4rem;
+  padding-block: 5rem;
+  padding-inline: 3rem;
   background: #fff;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-  transform: translateY(10%);
-  height: 75%;
-  padding: 0 2.5vw 0 2vw;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+  justify-content: space-evenly;
+
+  @media (width < 1770px) {
+    margin-inline-start: 4rem;
+  }
 }
 
-.about-me h2 {
-  padding-top: 2vw;
-}
+
 
 .introduction {
-  padding-top: 2vw;
-  font-size: 1.5vw;
+  padding-top: 2rem;
+  font-size: 2em;
 }
 
 .social-links-primary {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 2.5vw;
 }
 
 .social-links-primary ul {
@@ -140,6 +150,6 @@ img {
 }
 
 .social-links-primary ul li {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 3rem;
+  height: 3rem;
 }
