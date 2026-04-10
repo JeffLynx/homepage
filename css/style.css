@@ -59,6 +59,7 @@ ul>li>a>img {
   height: 2rem;
 }
 
+/* #region mobile */
 .header-mobile::before {
   content: "";
   position: absolute;
@@ -134,8 +135,6 @@ ul>li>a>img {
   display: flex;
   gap: 1rem;
 }
-
-
 
 .main-mobile {
   display: grid;
@@ -230,41 +229,9 @@ ul>li>a>img {
   max-inline-size: 100%;
 }
 
-#screenshot-1 {
-  background-image: url("../Images/Jeff-Lynx-Rays.jpg");
-}
+/* #endregion */
 
-#screenshot-1,
-#screenshot-2,
-#screenshot-3,
-#screenshot-4,
-#screenshot-5,
-#screenshot-6 {
-  background-size: cover;
-  background-position: center;
-}
-
-
-
-@media (min-width: 500px) {
-  .wrapper-mobile {
-    display: none;
-  }
-}
-
-@media (max-width: 500px),
-(min-width: 1300px) {
-  .wrapper-tablet {
-    display: none;
-  }
-}
-
-@media (max-width: 1299px) {
-  .wrapper-desktop {
-    display: none;
-  }
-}
-
+/* #region tablet */
 .header-tablet::before {
   content: "";
   position: absolute;
@@ -445,4 +412,42 @@ ul>li>a>img {
 .footer-portrait-tablet img {
   max-inline-size: 100%;
   border-radius: 25%;
+}
+
+/* #endregion */
+
+/* #region desktop */
+/* #endregion */
+
+#screenshot-1 {
+  background-image: url("../Images/Jeff-Lynx-Rays.jpg");
+}
+
+#screenshot-1,
+#screenshot-2,
+#screenshot-3,
+#screenshot-4,
+#screenshot-5,
+#screenshot-6 {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 500px) {
+  .wrapper-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 500px),
+(min-width: 1300px) {
+  .wrapper-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 1299px) {
+  .wrapper-desktop {
+    display: none;
+  }
 }
